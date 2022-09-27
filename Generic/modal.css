@@ -1,0 +1,240 @@
+.purple_image_overlay_section{position: relative;}
+.purple-modal-info {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(9, 6, 6, .5);
+	z-index: 1000;
+	display: none;
+	box-sizing: border-box;
+	overflow-y: auto;
+	text-align: left;
+	visibility: visible !important
+}
+
+.purple-modal-info * {
+	box-sizing: border-box
+}
+
+.purple-modal-info__window {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 600px;
+	height: fit-content;
+	padding: 27px 37px 60px;
+	background: #fff;
+	border-radius: 4px;
+	max-width: 90%;
+	margin: auto;
+}
+
+.purple-modal-info_xs .purple-modal-info__window {
+	width: 300px;
+	padding: 14px 16px 30px;
+	top: 10%;
+	-webkit-transform: translate(-50%, 0);
+	transform: translate(-50%, 0)
+}
+
+.purple-modal-info__close {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	padding: 0;
+	width: 24px;
+	height: 24px;
+	background: 0 0;
+	border: none;
+	box-shadow: none;
+	cursor: pointer
+}
+
+.purple-modal-info_xs .purple-modal-info__close {
+	top: 8px;
+	right: 8px
+}
+
+.purple-modal-info__close:hover {
+	opacity: .8
+}
+
+.purple-modal-info__close:before,
+.purple-modal-info__close:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 9px;
+	bottom: 0;
+	width: 2px;
+	background: #aaa
+}
+
+.purple-modal-info__close:before {
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg)
+}
+
+.purple-modal-info__close:after {
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg)
+}
+
+.purple-modal-info__logo {
+	display: block!important;
+	position: static!important;
+	background: url('./logo.png') no-repeat;
+	background-size: contain;
+	width: 152px;
+	height: 35px;
+	text-decoration: none
+}
+
+.purple-modal-info__text {
+	margin-top: 30px;
+	font-family: Roboto, -apple-system, BlinkMacSystemFont, segoe ui, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 400;
+	color: #000;
+	padding: 0 5px;
+}
+
+.purple-modal-info__text p {
+	font-family: Roboto, -apple-system, BlinkMacSystemFont, segoe ui, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol
+}
+
+.purple-modal-info_xs .purple-modal-info__text {
+	margin-top: 15px
+}
+
+.purple-modal-info__text a {
+	display: inline!important;
+	color: #027bff!important;
+	text-decoration: none
+}
+
+.purple-modal-info__text a:hover {
+	color: #027bff!important;
+	text-decoration: underline
+}
+
+.purple-modal-info__text p {
+	margin: 0
+}
+
+.purple-modal-info__text p+p {
+	margin-top: 12px
+}
+
+.post-feat-text {
+	display: none
+}
+
+a.purple-link:hover {
+	background: 0 0
+}
+
+.purple-feedback {
+	position: absolute;
+	bottom: 75px;
+	right: 40px;
+	background: #fff;
+	border-radius: 5px;
+	margin: 0!important;
+	padding: 0;
+	list-style: none;
+	overflow: visible!important;
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition: opacity .3s, visibility .3s;
+	transition: opacity .3s, visibility .3s
+}
+
+.purple-feedback * {
+	box-sizing: border-box
+}
+
+.purple-feedback--vis {
+	opacity: 1!important;
+	visibility: visible!important
+}
+
+.purple-feedback:after {
+	content: '';
+	position: absolute;
+	bottom: 11px;
+	right: -7px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 5px 0 5px 7px;
+	border-color: transparent transparent transparent #fff
+}
+
+.purple-feedback__item {
+	display: block!important;
+	font-family: Roboto, -apple-system, BlinkMacSystemFont, segoe ui, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol;
+	font-size: 12px!important;
+	line-height: 12px!important;
+	color: #000!important;
+	padding: 8px 9px;
+	margin: 0!important;
+	border-bottom: 1px solid rgba(0, 0, 0, .13);
+	cursor: pointer
+}
+
+.purple-feedback__item:hover {
+	color: #0075ff!important
+}
+
+.purple-feedback__item:last-child {
+	border-bottom: none
+}
+
+.purple-feedback--sm {
+	right: 35px;
+	bottom: 42px
+}
+
+.purple-feedback--sm:after {
+	bottom: 4px
+}
+
+.purple-feedback--sm .purple-feedback__item {
+	font-size: 13px!important;
+	line-height: 13px!important;
+	padding: 11px 13px
+}
+
+.showZoomIn {animation-name: showZoomIn;animation-duration: .5s;animation-fill-mode: both}
+.hideZoomOut{animation-name: hideZoomOut;animation-duration: .5s;animation-fill-mode: both;}
+.bgcolor{animation-name: bgcolor;animation-duration: .5s;animation-fill-mode: both;}
+.bgcolorRemove{animation-name: bgcolorRemove;animation-duration: .5s;animation-fill-mode: both;}
+@keyframes showZoomIn {
+    from {opacity: 0;transform: scale3d(.3, .3, .3)}
+    to {opacity:1;transform: scale3d(1, 1, 1)}
+} 
+
+@keyframes hideZoomOut {
+  100% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+}
+
+@keyframes bgcolor {
+    0%     {background-color:inherit;}
+    100%  {background-color:rgba(9, 6, 6, .5);}
+}
+
+@keyframes bgcolorRemove {
+    100%  {background-color:inherit;}
+}
+
+
+
