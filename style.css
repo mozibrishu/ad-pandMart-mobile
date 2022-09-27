@@ -1,103 +1,285 @@
-* {
-    margin: 0;
-    box-sizing: border-box;
+ /*
+Animation Name: Image Overlay
+Author: Lincoln Mahmud
+Create Date: 23 June 2021;
+*/
+ 
+ .purple__wrapper * {
+     margin: 0;
+     padding: 0;
+     user-select: none;
+ }
+ 
+ .purple__wrapper img {
+     background: transparent !important;
+ }
+ 
+ .purple__wrapper .purple_slide img {
+     max-width: 100%;
+     max-height: 100%
+ }
+ 
+ .purple_slide_bg img {
+     width: 100%
+ }
+ 
+ #purple_image_overlay_section {
+     position: relative;
+ }
+ 
+ .purple__wrapper {
+     bottom: 0;
+     width: 320px;
+     height: 60px;
+     position: absolute;
+     background: url('./images/bg.png');
+     cursor: pointer;
+     background-size: 100% 100%;
+     left: 0;
+     right: 0;
+     margin: 0 auto;
+     background-position: bottom;
+     background-repeat: no-repeat;
+     overflow: hidden;
+ }
+ 
+ .purple_slide_1 {
+     width: 100%;
+     height: 100%;
+ }
+ 
+ .logo {
+     width: 100%;
+     height: 100%;
+ }
+ 
+ .fourteen {
+     width: 100%;
+     height: 100%;
+ }
+ 
+ .t1 {
+     width: 100%;
+     height: 100%;
+ }
+ 
+ @keyframes leftTomiddle {
+     0% {
+         left: -100%;
+     }
+     100% {
+         left: 0%;
+     }
+ }
+ 
+ .middleToright {
+     animation: middleToright;
+     animation-duration: 1s;
+     animation-timing-function: linear;
+     animation-fill-mode: both;
+     animation-delay: 1s;
+ }
+ 
+ @keyframes middleToright {
+     0% {
+         left: 0%;
+     }
+     100% {
+         left: 200%;
+     }
+ }
+ 
+ .absolute {
+     position: absolute;
+ }
+ 
+ .hidden {
+     display: none;
+ }
+ 
+ .pulse {
+     animation: pulse 2s ease-in-out infinite;
+ }
+ 
+ @keyframes Zoomout {
+     0% {
+         opacity: 0;
+         transform: scale3d(.1, .1, .1)
+     }
+     100% {
+         opacity: 1;
+         transform: scale3d(1, 1, 1) translateX(-40%)
+     }
+ }
+ 
+ .Zoomout {
+     animation-name: Zoomout;
+     animation-duration: 1s;
+     animation-fill-mode: both;
+     animation-delay: 3s;
+ }
+ 
+ @keyframes pulse {
+     0% {
+         transform: scaleX(1) scaleY(1)
+     }
+     50% {
+         transform: scale3d(.95, .95, .95)
+     }
+     to {
+         transform: scaleX(1) scaleY(1)
+     }
+ }
+ 
+ @keyframes hideZoomOut {
+     100% {
+         opacity: 0;
+         transform: scale3d(.3, .3, .3)
+     }
+ }
+ 
+ @keyframes hideZoomOutBottom {
+     100% {
+         opacity: 0;
+         transform: scale3d(.3, .3, .3) translateY(100%)
+     }
+ }
+ 
+ @keyframes showZoomIn {
+     from {
+         transform: scale3d(.5, .5, .5)
+     }
+     to {
+         transform: scale3d(1, 1, 1)
+     }
+ }
+ 
+ @keyframes showZoomInBottom {
+     from {
+         transform: scale3d(.5, .5, .5) translateY(50%)
+     }
+     to {
+         transform: scale3d(1, 1, 1)
+     }
+ }
+ 
+ @keyframes topBottom {
+     0%,
+     100% {
+         transform: translateY(5px);
+     }
+     50% {
+         transform: translateY(-2px);
+     }
+ }
+ 
+ @keyframes bottle {
+     0% {
+         transform: rotateZ(0deg)
+     }
+     10% {
+         transform: rotateZ(-3deg)
+     }
+     20% {
+         transform: rotateZ(3deg)
+     }
+     30% {
+         transform: rotateZ(-3deg)
+     }
+     40% {
+         transform: rotateZ(3deg)
+     }
+     50% {
+         transform: rotateZ(-3deg)
+     }
+     60% {
+         transform: rotateZ(0deg)
+     }
+     100% {
+         transform: rotateZ(0deg)
+     }
+ }
+ 
+ .bottle {
+     animation: bottle 3s ease-in-out infinite;
+ }
+ 
+ .hideZoomOut {
+     animation-name: hideZoomOut;
+     animation-duration: .5s;
+     animation-fill-mode: both;
+     animation-iteration-count: 1
+ }
+ 
+ .hideZoomOutBottom {
+     animation-name: hideZoomOutBottom;
+     animation-duration: .5s;
+     animation-fill-mode: both;
+     animation-iteration-count: 1
+ }
+ 
+ .showZoomIn {
+     animation-name: showZoomIn;
+     animation-duration: .5s;
+     animation-fill-mode: both;
+ }
+ 
+ .showZoomInBottom {
+     animation-name: showZoomInBottom;
+     animation-duration: .5s;
+     animation-fill-mode: both
+ }
+ 
+ .topBottom {
+     animation-name: topBottom;
+     animation-duration: 3s;
+     animation-fill-mode: both;
+     animation-iteration-count: infinite;
+ }
+ /*info css*/
+ 
+ .purple_generic_close {
+     position: absolute;
+     bottom: 50%;
+     right: 0px;
+     background: url('./Generic/close.svg') no-repeat;
+     background-size: 100% 100%;
+     width: 18px;
+     height: 18px;
+     -webkit-animation: fadeIn24 1s .4s both;
+     animation: fadeIn24 1s .4s both;
+     cursor: pointer;
+     margin: 0!important;
+     z-index: 1;
+ }
+ 
+ .purple_generic_icon {
+     position: absolute;
+     bottom: 20%;
+     right: 0px;
+     background: url('./Generic/info.svg') no-repeat;
+     background-size: 100% 100%;
+     width: 18px;
+     height: 18px;
+     -webkit-animation: fadeIn24 1s .4s both;
+     animation: fadeIn24 1s .4s both;
+     cursor: pointer;
+     margin: 0!important;
+     z-index: 1;
+ }
+
+ .orderNow-anim {
+    animation: orderNow 3s ease-in-out infinite;
 }
 
+@keyframes orderNow {
 
-.container {
-    width: 320px;
-    height: 60px;
-    max-width: 100%;
-    max-height: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    overflow: hidden;
-    /* background-color: antiquewhite; */
-    /* background-image: url(./images/728x120.png); */
-}
+    0%,
+    100% {
+        transform: scale(1);
+    }
 
-/* Slide_1 */
-.slide_1 {
-    height: 100%;
-    width: 100%;
-}
-
-.slide_1 .element_1 {
-    height: 100%;
-    width: 100%;
-}
-
-.slide_1 .element_2 {
-    height: 100%;
-    width: 100%;
-}
-
-.slide_1 .element_3 {
-    height: 100%;
-    width: 100%;
-}
-
-.slide_1 .element_4_1 {
-    height: 100%;
-    width: 100%;
-}
-
-.slide_1 .element_4_2 {
-    height: 100%;
-    width: 100%;
-}
-
-
-.slide_1 .element_5 {
-    height: 100%;
-    width: 100%;
-}
-
-.slide_1 .element_6 {
-    height: 100%;
-    width: 100%;
-}
-
-
-
-/* Utility class */
-.absolute {
-    position: absolute;
-}
-
-.hidden {
-    display: none;
-}
-
-.zeroOpacity {
-    opacity: 0;
-}
-
-.purple_generic_close {
-    top: 7px;
-    right: 5px;
-    height: 18px;
-    width: 18px;
-    background: url("./Generic/close.svg") no-repeat;
-    background-size: 100% 100%;
-    position: absolute;
-    cursor: pointer;
-    margin: 0 !important;
-    z-index: 1;
-}
-
-.purple_generic_icon {
-    position: absolute;
-    top: 33px;
-    right: 5px;
-    background: url('./Generic/info.svg') no-repeat;
-    background-size: 100% 100%;
-    width: 18px;
-    height: 18px;
-    cursor: pointer;
-    margin: 0 !important;
-    z-index: 1;
+    50% {
+        transform: scale(1.04);
+    }
 }
