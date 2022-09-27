@@ -15,5 +15,5 @@ gsap.timeline({ defaults: { ease: "power2.out" },delay:3,repeat:-1,repeatDelay:2
 document.querySelector(".closeBtn").addEventListener("click", () => {
     gsap.timeline({ defaults: { ease: "power2.out" } })
         .to(".container", { duration: 1.5, scale: .5, opacity: 0 })
-        .to([".element_7", '#purple-info-handler'], { opacity: 0, duration: .4 }, "<")
+        .to([".closeBtn", '#purple-info-handler'], { opacity: 0, duration: .4 }, "<")
 });
